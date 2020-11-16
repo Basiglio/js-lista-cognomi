@@ -18,5 +18,11 @@ for (var i = 0; i < databaseSurname.length; i++) {
 }
 
 // inserisco nell' arrey il mio cognome
-databaseSurname.push(cognome)
+databaseSurname.push(cognome);
 console.log(databaseSurname);
+
+// stampo la lista ordina alfabeticamente
+databaseSurname.sort();
+console.log(databaseSurname);
+
+stampo su html
