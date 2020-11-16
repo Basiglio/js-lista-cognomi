@@ -22,7 +22,8 @@ databaseSurname.push(cognome);
 console.log(databaseSurname);
 
 // stampo la lista ordina alfabeticamente
-databaseSurname.sort();
-console.log(databaseSurname);
+var databaseAlphabeticalOrder = databaseSurname.sort();
+console.log("questo è l'ordine alfabetico " + databaseAlphabeticalOrder);
 
 // stampo su html
+// document.getElementById('elenco').innerHTML = databaseAlphabeticalOrder;
