@@ -17,9 +17,18 @@ databaseSurname.push(cognome);
 console.log(databaseSurname);
 
 // ordina alfabeticamente
-var databaseAlphabeticalOrder = databaseSurname.sort();
+function confrontaS(a,b) {
+  minA = a.toLowerCase();
+  minB = b.toLowerCase();
+  if (minA < minB) {
+    return -1; }
+      else {
+        if (minA > minB) { return 1; }
+        else { return 0; }
+            }
+  }
+var databaseAlphabeticalOrder = databaseSurname.sort(confrontaS);
 console.log("questo è l'ordine alfabetico " + databaseAlphabeticalOrder);
-
 
 // stampo la lista ordina alfabeticamente
 for (var i = 0; i < databaseAlphabeticalOrder.length; i++) {
