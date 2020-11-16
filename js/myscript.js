@@ -34,3 +34,8 @@ function confrontaS(a,b) {
 // stampo la lista ordina alfabeticamente
 var databaseAlphabeticalOrder = databaseSurname.sort(confrontaS);
 console.log("questo è l'ordine alfabetico " + databaseAlphabeticalOrder);
+
+// Stampo posizione cognome nell'array
+for (var i = 0; i < databaseAlphabeticalOrder.length; i++) {
+  console.log(databaseAlphabeticalOrder[i]);
+}
