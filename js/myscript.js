@@ -25,7 +25,7 @@ function confrontaS(a,b) {
       else {
         if (minA > minB) { return 1; }
         else { return 0; }
-            }
+      }
   }
 var databaseAlphabeticalOrder = databaseSurname.sort(confrontaS);
 console.log("questo è l'ordine alfabetico " + databaseAlphabeticalOrder);
@@ -33,4 +33,11 @@ console.log("questo è l'ordine alfabetico " + databaseAlphabeticalOrder);
 // stampo la lista ordina alfabeticamente
 for (var i = 0; i < databaseAlphabeticalOrder.length; i++) {
   document.getElementById('elenco').innerHTML += "<li>" + databaseAlphabeticalOrder[i] + "</li>"
+}
+
+// stampo posizione cognome
+for (var i = 0; i < databaseAlphabeticalOrder.length; i++) {
+  if (cognome == databaseAlphabeticalOrder[i]) {
+    document.getElementById('surname').innerHTML = i +1;
+  }
 }
