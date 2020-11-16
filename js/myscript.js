@@ -6,7 +6,7 @@
 
 
 // creo array iniziale
-var databaseSurname = ["topolino", "pippo", "pluto", "minnie", "paperino", "clarabella", "paperina"];
+var databaseSurname = ["Topolino", "Pippo", "Pluto", "Minnie", "Paperino", "Clarabella", "Paperina"];
 
 // chiedo all'utente il cognome
 var cognome = prompt("qual'è il tuo cognome?");
@@ -22,8 +22,15 @@ databaseSurname.push(cognome);
 console.log(databaseSurname);
 
 // stampo la lista ordina alfabeticamente
-var databaseAlphabeticalOrder = databaseSurname.sort();
+function confrontaS(a,b) {
+  minA = a.toLowerCase();
+  minB = b.toLowerCase();
+  if (minA < minB) { return -1; }
+      else {
+         if (minA > minB) { return 1; }
+        else { return 0; }
+            }
+          }
+// stampo la lista ordina alfabeticamente
+var databaseAlphabeticalOrder = databaseSurname.sort(confrontaS);
 console.log("questo è l'ordine alfabetico " + databaseAlphabeticalOrder);
-
-// stampo su html
-// document.getElementById('elenco').innerHTML = databaseAlphabeticalOrder;
