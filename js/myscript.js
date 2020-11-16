@@ -12,36 +12,16 @@ var databaseSurname = ["Topolino", "Pippo", "Pluto", "Minnie", "Paperino", "Clar
 var cognome = prompt("qual'è il tuo cognome?");
 console.log("questo è il cognome: " + cognome);
 
-// stampo i cognomi dell'array
-for (var i = 0; i < databaseSurname.length; i++) {
-  console.log(databaseSurname[i]);
-}
-
 // inserisco nell' arrey il mio cognome
 databaseSurname.push(cognome);
 console.log(databaseSurname);
 
-// stampo la lista ordina alfabeticamente
-function confrontaS(a,b) {
-  minA = a.toLowerCase();
-  minB = b.toLowerCase();
-  if (minA < minB) { return -1;
-  } else {
-         if (minA > minB) { return 1;
-         } else { return 0; }
-            }
-          }
-// stampo la lista ordina alfabeticamente
-var databaseAlphabeticalOrder = databaseSurname.sort(confrontaS);
+// ordina alfabeticamente
+var databaseAlphabeticalOrder = databaseSurname.sort();
 console.log("questo è l'ordine alfabetico " + databaseAlphabeticalOrder);
 
-// stampo elenco ordinato su html
-document.getElementById("elenco").innerHTML = "questo è l'array ordinato alfabeticamente: " + databaseAlphabeticalOrder;
 
-// Stampo posizione cognome nell'array
+// stampo la lista ordina alfabeticamente
 for (var i = 0; i < databaseAlphabeticalOrder.length; i++) {
-  console.log(databaseAlphabeticalOrder[i]);
-  if (cognome == databaseAlphabeticalOrder[i]) {
-    alert("il tuo cognome è nella posizione " + databaseAlphabeticalOrder[i])
-  }
+  document.getElementById('elenco').innerHTML += "<li>" + databaseAlphabeticalOrder[i] + "</li>"
 }
