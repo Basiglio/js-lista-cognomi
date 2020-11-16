@@ -25,10 +25,10 @@ console.log(databaseSurname);
 function confrontaS(a,b) {
   minA = a.toLowerCase();
   minB = b.toLowerCase();
-  if (minA < minB) { return -1; }
-      else {
-         if (minA > minB) { return 1; }
-        else { return 0; }
+  if (minA < minB) { return -1;
+  } else {
+         if (minA > minB) { return 1;
+         } else { return 0; }
             }
           }
 // stampo la lista ordina alfabeticamente
@@ -43,6 +43,5 @@ for (var i = 0; i < databaseAlphabeticalOrder.length; i++) {
   console.log(databaseAlphabeticalOrder[i]);
   if (cognome == databaseAlphabeticalOrder[i]) {
     alert("il tuo cognome è nella posizione " + databaseAlphabeticalOrder[i])
-    
   }
 }
